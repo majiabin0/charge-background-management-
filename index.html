@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<title>项目实战</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery.js" type="text/javascript"></script>
+</head>
+<body>
+
+
+<div class="container">
+	<div class="eol-img"><img src="img/eol.png"></div>
+	<div class="pic-img"><img src="img/pic_ziti.png"></div>
+	<div class="login-info">
+		<div class="login-info1">
+			<div class="login-text1">用户名:</div>
+			<input class="login-input1" name="userid" id="userid" placeholder="请输入您的用户名">
+			<img src="img/wodetuangou.png"class="username">
+		</div>
+		<div class="login-info2">
+			<div class="login-text1">密码:</div>
+			<input class="login-input2" name="password" id="password" placeholder="请输入您的密码">
+			<img src="img/mima.png" class="password">
+		</div>
+		<div class="login-info3">
+			<button class="login-btn1" onclick="login();">登&nbsp&nbsp录</button>
+			<button class="login-btn2">申请试用</button>
+		</div>
+	</div>
+<div class="panel-footer">
+    <span style="margin-right: 30px;"><a href="http://www.beian.miit.gov.cn/" target="_blank" style="text-decoration:none;color: #000000">京ICP备12045350号</a></span>
+	<span style="margin-right: 30px;color: #000000">版权所有：赛尔互联（北京）教育科技有限公司</span>
+	<span style="color: #000000">Mail to：huojx@eol.cn</span>
+</div>
+</div>
+<SCRIPT language="JavaScript">
+	//首先获取name就是标记
+	function login()
+	{
+		var userid = $('#userid').val();
+		var password = $('#password').val();
+		if(userid == '')
+		{
+			alert('请输入用户名');return false;
+		}
+		if(password == '')
+		{
+			alert('请输入密码');return false;
+		}
+		//window.location.href = 'http://yqms.istarshine.com/Login/doLogin?userid='+encodeURI(userid)+'&password='+password;
+		window.location.href = 'http://system.view.edu.cn/Login/doLogin?userid='+encodeURI(userid)+'&password='+password;
+		//window.location.href = 'http://system.view.edu.cn/apps/yqzb/LoginOK.do?userid='+encodeURI(userid)+'&passwd='+password+'&type=login&logintype=1';
+		return false;
+	}
+</SCRIPT>
+</body>
+</html>
